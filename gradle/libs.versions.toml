@@ -13,6 +13,7 @@ androidx-material = "1.10.0"
 androidx-constraintlayout = "2.1.4"
 androidx-test-junit = "1.1.5"
 androidx-espresso-core = "3.5.1"
+kamelImage = "0.9.0"
 koinCore = "3.5.0"
 koinTest = "3.2.0"
 kotlin = "1.9.20"
@@ -24,6 +25,7 @@ mvvmCore = "0.16.1"
 voyagerNavigator = "1.0.0-rc07"
 
 [libraries]
+kamel-image = { module = "media.kamel:kamel-image", version.ref = "kamelImage" }
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCore" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinCore" }
 koin-test = { module = "io.insert-koin:koin-test", version.ref = "koinTest" }
