@@ -48,6 +48,7 @@ kotlin {
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
+            implementation(libs.kamel.image)
             api(libs.mvvm.core)
             api(libs.mvvm.compose)
         }
