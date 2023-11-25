@@ -47,7 +47,6 @@ fun ScheduleScreenContent(
         },
         drawerContent = {
             DrawerContent(
-                clickedScreen = Schedule(),
                 onItemClick = { clickedScreen ->
                     navigator.push(clickedScreen)
                     coroutineScope.launch {

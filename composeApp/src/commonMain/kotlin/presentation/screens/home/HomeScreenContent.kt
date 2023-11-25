@@ -39,7 +39,7 @@ fun HomeScreenContent(
                     }) {
                         Icon(
                             imageVector = Icons.Default.Menu,
-                            contentDescription = null
+                            contentDescription = "Home Screen menu icon"
                         )
                     }
                 }
@@ -47,7 +47,6 @@ fun HomeScreenContent(
         },
         drawerContent = {
             DrawerContent(
-                clickedScreen = Home(),
                 onItemClick = { clickedScreen ->
                     navigator.push(clickedScreen)
                     coroutineScope.launch {

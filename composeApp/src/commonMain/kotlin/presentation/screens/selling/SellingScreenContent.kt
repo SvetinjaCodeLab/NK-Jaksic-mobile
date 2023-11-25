@@ -15,7 +15,6 @@ import cafe.adriel.voyager.navigator.currentOrThrow
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import presentation.composables.drawer.DrawerContent
-import presentation.screens.team.Team
 
 @Composable
 fun SellingScreenContent(
@@ -47,7 +46,6 @@ fun SellingScreenContent(
         },
         drawerContent = {
             DrawerContent(
-                clickedScreen = Selling(),
                 onItemClick = { clickedScreen ->
                     navigator.push(clickedScreen)
                     coroutineScope.launch {

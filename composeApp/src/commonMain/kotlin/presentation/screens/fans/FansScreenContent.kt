@@ -47,7 +47,6 @@ fun FansScreenContent(
         },
         drawerContent = {
             DrawerContent(
-                clickedScreen = Fans(),
                 onItemClick = { clickedScreen ->
                     navigator.push(clickedScreen)
                     coroutineScope.launch {

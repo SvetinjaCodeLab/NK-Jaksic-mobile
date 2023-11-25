@@ -47,7 +47,6 @@ fun StadiumScreenContent(
         },
         drawerContent = {
             DrawerContent(
-                clickedScreen = Stadium(),
                 onItemClick = { clickedScreen ->
                     navigator.push(clickedScreen)
                     coroutineScope.launch {

@@ -2,7 +2,6 @@ package presentation.composables.drawer
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.twotone.AccountBox
 import androidx.compose.material.icons.twotone.ArrowBack
@@ -15,13 +14,21 @@ import androidx.compose.material.icons.twotone.Send
 import androidx.compose.material.icons.twotone.Settings
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
+import presentation.screens.fans.Fans
+import presentation.screens.feedback.Feedback
+import presentation.screens.home.Home
+import presentation.screens.news.News
+import presentation.screens.results.Results
+import presentation.screens.schedule.Schedule
+import presentation.screens.selling.Selling
+import presentation.screens.stadium.Stadium
+import presentation.screens.table.Table
+import presentation.screens.team.Team
 
 @Composable
 fun DrawerContent(
     modifier: Modifier = Modifier,
-    clickedScreen: Screen,
     onItemClick: (clickedScreen: Screen) -> Unit
 ) {
     Column {
@@ -32,68 +39,68 @@ fun DrawerContent(
         DrawerItem(
             text = "Home",
             icon = Icons.TwoTone.Home,
-            clickedScreen = clickedScreen,
+            screen = Home,
             onItemClick = onItemClick
         )
         DrawerItem(
             text = "News",
             icon = Icons.TwoTone.Info,
-            clickedScreen = clickedScreen,
+            screen = News(),
             onItemClick = onItemClick
         )
         DrawerItem(
             text = "Results",
             icon = Icons.TwoTone.AccountBox,
-            clickedScreen = clickedScreen,
+            screen = Results(),
             onItemClick = onItemClick
         )
         DrawerItem(
             text = "Schedule",
             icon = Icons.TwoTone.Settings,
-            clickedScreen = clickedScreen,
+            screen = Schedule(),
             onItemClick = onItemClick
         )
         DrawerItem(
             text = "Table",
             icon = Icons.TwoTone.Face,
-            clickedScreen = clickedScreen,
+            screen = Table(),
             onItemClick = onItemClick
         )
         DrawerItem(
             text = "Team",
             icon = Icons.TwoTone.Done,
-            clickedScreen = clickedScreen,
+            screen = Team(),
             onItemClick = onItemClick
         )
         DrawerItem(
             text = "Fans",
             icon = Icons.TwoTone.Face,
-            clickedScreen = clickedScreen,
+            screen = Fans(),
             onItemClick = onItemClick
         )
         DrawerItem(
             text = "Stadium",
             icon = Icons.TwoTone.Build,
-            clickedScreen = clickedScreen,
+            screen = Stadium(),
             onItemClick = onItemClick
         )
         DrawerItem(
             text = "Selling",
             icon = Icons.TwoTone.Send,
-            clickedScreen = clickedScreen,
+            screen = Selling(),
             onItemClick = onItemClick
         )
         DrawerItem(
             text = "Feedback",
             icon = Icons.TwoTone.Info,
-            clickedScreen = clickedScreen,
+            screen = Feedback(),
             onItemClick = onItemClick
         )
         Spacer(modifier = Modifier.weight(1f))
         DrawerItem(
             text = "Logout",
             icon = Icons.TwoTone.ArrowBack,
-            clickedScreen = clickedScreen,
+            screen = Team(),
             onItemClick = onItemClick
         )
     }
