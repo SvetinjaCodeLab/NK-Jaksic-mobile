@@ -4,8 +4,7 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.navigator.Navigator
-import presentation.screens.team.Team
-import presentation.screens.team.TeamScreen
+import presentation.screens.home.Home
 
 @Composable
 fun App() {
@@ -14,7 +13,7 @@ fun App() {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colors.background
         ) {
-            Navigator(Team)
+            Navigator(Home)
         }
     }
 }

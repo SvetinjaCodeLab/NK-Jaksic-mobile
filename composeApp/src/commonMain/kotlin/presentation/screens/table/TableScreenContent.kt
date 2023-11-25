@@ -15,7 +15,6 @@ import cafe.adriel.voyager.navigator.currentOrThrow
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import presentation.composables.drawer.DrawerContent
-import presentation.screens.team.Team
 
 @Composable
 fun TableScreenContent(
@@ -47,7 +46,6 @@ fun TableScreenContent(
         },
         drawerContent = {
             DrawerContent(
-                clickedScreen = Table(),
                 onItemClick = { clickedScreen ->
                     navigator.push(clickedScreen)
                     coroutineScope.launch {

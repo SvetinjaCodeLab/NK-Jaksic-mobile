@@ -15,7 +15,6 @@ import cafe.adriel.voyager.navigator.currentOrThrow
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import presentation.composables.drawer.DrawerContent
-import presentation.screens.team.Team
 
 @Composable
 fun FeedbackScreenContent(
@@ -46,7 +45,6 @@ fun FeedbackScreenContent(
             )
         }, drawerContent = {
             DrawerContent(
-                clickedScreen = Feedback(),
                 onItemClick = { clickedScreen ->
                     navigator.push(clickedScreen)
                     coroutineScope.launch {

@@ -47,7 +47,6 @@ fun NewsScreenContent(
         },
         drawerContent = {
             DrawerContent(
-                clickedScreen = News(),
                 onItemClick = { clickedScreen ->
                     navigator.push(clickedScreen)
                     coroutineScope.launch {

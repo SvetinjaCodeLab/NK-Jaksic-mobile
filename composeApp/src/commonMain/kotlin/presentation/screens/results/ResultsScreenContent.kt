@@ -29,7 +29,7 @@ fun ResultScreenContent(
         scaffoldState = scaffoldState,
         topBar = {
             TopAppBar(
-                title = { Text("Team Screen") },
+                title = { Text("Results Screen") },
                 backgroundColor = Color.LightGray,
                 navigationIcon = {
                     IconButton(onClick = {
@@ -47,7 +47,6 @@ fun ResultScreenContent(
         },
         drawerContent = {
             DrawerContent(
-                clickedScreen = Results(),
                 onItemClick = { clickedScreen ->
                     navigator.push(clickedScreen)
                     coroutineScope.launch {

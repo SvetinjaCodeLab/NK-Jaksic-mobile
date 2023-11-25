@@ -46,7 +46,6 @@ fun TeamScreenContent(
         },
         drawerContent = {
             DrawerContent(
-                clickedScreen = Team,
                 onItemClick = { clickedScreen ->
                     navigator.push(clickedScreen)
                     coroutineScope.launch {

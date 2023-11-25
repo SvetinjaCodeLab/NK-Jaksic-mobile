@@ -24,7 +24,7 @@ fun DrawerItem(
     modifier: Modifier = Modifier,
     text: String,
     icon: ImageVector,
-    clickedScreen: Screen,
+    screen: Screen,
     onItemClick: (clickedScreen: Screen) -> Unit
 ) {
     Row(
@@ -33,7 +33,7 @@ fun DrawerItem(
             .padding(8.dp)
             .fillMaxWidth()
             .background(MaterialTheme.colors.background)
-            .clickable { onItemClick.invoke(clickedScreen) }
+            .clickable { onItemClick.invoke(screen) }
     ) {
         Image(
             modifier = Modifier.padding(start = 8.dp),
