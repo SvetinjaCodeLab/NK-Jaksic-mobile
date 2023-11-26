@@ -53,6 +53,7 @@ mvvm-core = { module = "dev.icerock.moko:mvvm-core", version.ref = "mvvmCore" }
 voyager-androidx = { module = "cafe.adriel.voyager:voyager-androidx", version.ref = "voyagerNavigator" }
 voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyagerNavigator" }
 voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyagerNavigator" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3", version = "1.1.2" }
 
 [plugins]
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
