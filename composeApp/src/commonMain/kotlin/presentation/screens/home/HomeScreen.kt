@@ -1,20 +1,25 @@
 package presentation.screens.home
 
-import androidx.compose.material.rememberScaffoldState
+import androidx.compose.material3.DrawerValue
+import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
 
 @Composable
 fun HomeScreen(viewModel: HomeScreenViewModel) {
     val uiState by viewModel.uiState.collectAsState()
-    val scaffoldState = rememberScaffoldState()
     val coroutineScope = rememberCoroutineScope()
+    val navigator = LocalNavigator.currentOrThrow
+    val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
 
     HomeScreenContent(
         uiState = uiState,
-        scaffoldState = scaffoldState,
-        coroutineScope = coroutineScope
+        coroutineScope = coroutineScope,
+        navigator = navigator,
+        drawerState = drawerState
     )
 }
