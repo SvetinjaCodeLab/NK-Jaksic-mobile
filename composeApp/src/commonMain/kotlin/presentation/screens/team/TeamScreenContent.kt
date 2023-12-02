@@ -1,5 +1,7 @@
 package presentation.screens.team
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.DrawerState
@@ -14,6 +16,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import cafe.adriel.voyager.navigator.Navigator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -59,7 +62,21 @@ fun TeamScreenContent(
                     }
                 )
             },
-            content = {}
+            content = {
+                Column(
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    val value = uiState.playersList
+                    if (uiState.playersList.isEmpty()) {
+                        Text("List is empty")
+                    } else {
+                        uiState.playersList.first().firstName?.let {
+                            Text(it)
+                        }
+                    }
+                }
+            }
         )
     }
 }

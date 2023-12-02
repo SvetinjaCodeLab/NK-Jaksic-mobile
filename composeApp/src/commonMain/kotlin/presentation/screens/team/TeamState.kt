@@ -1,3 +1,7 @@
 package presentation.screens.team
 
-data class TeamState(val id: Int? = null)
+import data.model.Player
+
+data class TeamState(
+    val playersList: List<Player> = emptyList()
+)
