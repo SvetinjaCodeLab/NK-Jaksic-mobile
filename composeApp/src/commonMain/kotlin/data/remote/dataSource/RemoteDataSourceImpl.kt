@@ -5,8 +5,5 @@ import data.remote.api.NKJaksicApi
 import org.lighthousegames.logging.logging
 
 class RemoteDataSourceImpl(private val nkJaksicApi: NKJaksicApi) : RemoteDataSource {
-    override suspend fun getAllPlayers(): List<Player> {
-        logging("Player________ ${nkJaksicApi.getAllPlayers()}")
-        return nkJaksicApi.getAllPlayers()
-    }
+    override suspend fun getAllPlayers(): List<Player> = nkJaksicApi.getAllPlayers()
 }
