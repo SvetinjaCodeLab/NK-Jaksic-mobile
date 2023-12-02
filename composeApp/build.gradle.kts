@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
+    alias(libs.plugins.kotlinSerialization)
 }
 
 kotlin {
@@ -25,7 +26,7 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     sourceSets {
         androidMain.dependencies {
             implementation(libs.compose.ui)
@@ -33,12 +34,16 @@ kotlin {
             implementation(libs.androidx.activity.compose)
             implementation(libs.koin.androidx.compose)
             implementation(libs.ktor.client.android)
+            implementation(libs.ktor.client.okhttp)
+            implementation(libs.kotlinx.coroutines.android)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
+            implementation(compose.material3)
+            implementation(libs.kotlinx.coroutines.core)
             implementation(libs.voyager.navigator)
             implementation(libs.voyager.androidx)
             implementation(libs.voyager.koin)
@@ -48,9 +53,9 @@ kotlin {
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.kamel.image)
-            implementation(compose.material3)
             api(libs.mvvm.core)
             api(libs.mvvm.compose)
+            api(libs.lighthousegames.logging)
         }
     }
 }
