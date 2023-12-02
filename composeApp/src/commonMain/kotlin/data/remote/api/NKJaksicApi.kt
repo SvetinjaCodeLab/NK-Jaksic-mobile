@@ -14,29 +14,17 @@ import org.koin.core.logger.Logger
 import org.lighthousegames.logging.logging
 
 class NKJaksicApi {
-    companion object {
-        val log = logging()
-    }
-
     private val httpClient = HttpClient {
-        // defaultRequest {
-        //     host = "https://10.0.2.2:8080/"
-        //     url { protocol = URLProtocol.HTTPS }
-        // }
+        defaultRequest {
+            url("http://10.0.2.2:8080/")
+        }
         install(ContentNegotiation) {
             json(Json {
-                // ignoreUnknownKeys = true
-                // useAlternativeNames = false
+                ignoreUnknownKeys = true
+                useAlternativeNames = false
             })
         }
     }
 
-    suspend fun getAllPlayers(): List<Player> {
-        try {
-            return httpClient.get("http://10.0.2.2:8080/players").body()
-        } catch (exception: Exception) {
-            log.d { "Error message: ${exception.message}" }
-        }
-        return emptyList()
-    }
+    suspend fun getAllPlayers(): List<Player> = httpClient.get("players").body()
 }

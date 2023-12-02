@@ -1,11 +1,9 @@
 package data.model
 
-import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
 data class Player(
-    @SerialName("player_Id")
     val playerId: Long? = null,
     val firstName: String? = null,
     val lastName: String? = null,
