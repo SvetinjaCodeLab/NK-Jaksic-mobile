@@ -40,7 +40,7 @@ fun NewsScreenContent(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("News Screen") },
+                    title = { Text("Vijesti") },
                     colors = TopAppBarDefaults.topAppBarColors(
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
                         titleContentColor = MaterialTheme.colorScheme.primary,

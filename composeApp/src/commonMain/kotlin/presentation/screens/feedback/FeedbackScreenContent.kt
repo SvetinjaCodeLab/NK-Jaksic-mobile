@@ -40,7 +40,7 @@ fun FeedbackScreenContent(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Feedback Screen") },
+                    title = { Text("Povratna informacija") },
                     colors = TopAppBarDefaults.topAppBarColors(
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
                         titleContentColor = MaterialTheme.colorScheme.primary,

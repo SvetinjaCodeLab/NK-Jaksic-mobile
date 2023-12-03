@@ -24,7 +24,7 @@ import presentation.screens.schedule.Schedule
 import presentation.screens.selling.Selling
 import presentation.screens.stadium.Stadium
 import presentation.screens.table.Table
-import presentation.screens.team.Team
+import presentation.screens.team.players.Players
 
 @Composable
 fun DrawerContent(
@@ -37,61 +37,61 @@ fun DrawerContent(
             email = "Jakšić 1, 34308"
         )
         DrawerItem(
-            text = "Home",
+            text = "Početna",
             icon = Icons.TwoTone.Home,
             screen = Home,
             onItemClick = onItemClick
         )
         DrawerItem(
-            text = "News",
+            text = "Vijesti",
             icon = Icons.TwoTone.Info,
             screen = News(),
             onItemClick = onItemClick
         )
         DrawerItem(
-            text = "Results",
+            text = "Rezultati",
             icon = Icons.TwoTone.AccountBox,
             screen = Results(),
             onItemClick = onItemClick
         )
         DrawerItem(
-            text = "Schedule",
+            text = "Raspored",
             icon = Icons.TwoTone.Settings,
             screen = Schedule(),
             onItemClick = onItemClick
         )
         DrawerItem(
-            text = "Table",
+            text = "Tablica",
             icon = Icons.TwoTone.Face,
             screen = Table(),
             onItemClick = onItemClick
         )
         DrawerItem(
-            text = "Team",
+            text = "Ekipa",
             icon = Icons.TwoTone.Done,
-            screen = Team(),
+            screen = Players(),
             onItemClick = onItemClick
         )
         DrawerItem(
-            text = "Fans",
+            text = "Navijači",
             icon = Icons.TwoTone.Face,
             screen = Fans(),
             onItemClick = onItemClick
         )
         DrawerItem(
-            text = "Stadium",
+            text = "Stadion",
             icon = Icons.TwoTone.Build,
             screen = Stadium(),
             onItemClick = onItemClick
         )
         DrawerItem(
-            text = "Selling",
+            text = "Prodaja",
             icon = Icons.TwoTone.Send,
             screen = Selling(),
             onItemClick = onItemClick
         )
         DrawerItem(
-            text = "Feedback",
+            text = "Povratna informacija",
             icon = Icons.TwoTone.Info,
             screen = Feedback(),
             onItemClick = onItemClick
@@ -100,7 +100,7 @@ fun DrawerContent(
         DrawerItem(
             text = "Logout",
             icon = Icons.TwoTone.ArrowBack,
-            screen = Team(),
+            screen = Players(),
             onItemClick = onItemClick
         )
     }

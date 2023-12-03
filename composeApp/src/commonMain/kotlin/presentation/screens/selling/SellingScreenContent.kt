@@ -40,7 +40,7 @@ fun SellingScreenContent(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Selling Screen") },
+                    title = { Text("Prodaja") },
                     colors = TopAppBarDefaults.topAppBarColors(
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
                         titleContentColor = MaterialTheme.colorScheme.primary,

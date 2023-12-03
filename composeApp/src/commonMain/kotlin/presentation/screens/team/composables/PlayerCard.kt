@@ -1,5 +1,6 @@
 package presentation.screens.team.composables
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -23,10 +24,16 @@ import io.kamel.image.KamelImage
 import io.kamel.image.asyncPainterResource
 
 @Composable
-fun PlayerCard(player: Player) {
+fun PlayerCard(
+    player: Player,
+    onItemClick: (player: Player) -> Unit
+) {
     ElevatedCard(
         elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
-        modifier = Modifier.fillMaxWidth().padding(8.dp)
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(8.dp)
+            .clickable { onItemClick.invoke(player) }
     ) {
         Row {
             player.photoUrl?.let {
