@@ -23,6 +23,7 @@ import cafe.adriel.voyager.navigator.Navigator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import presentation.composables.drawer.DrawerContent
+import presentation.screens.team.composables.PlayersList
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -70,7 +71,7 @@ fun TeamScreenContent(
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Text(uiState.playersList.toString())
+                    PlayersList(uiState.playersList)
                 }
             }
         )
