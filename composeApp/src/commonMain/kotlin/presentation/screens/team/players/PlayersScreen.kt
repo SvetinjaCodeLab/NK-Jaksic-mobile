@@ -1,4 +1,4 @@
-package presentation.screens.team
+package presentation.screens.team.players
 
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.rememberDrawerState
@@ -10,13 +10,13 @@ import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 
 @Composable
-fun TeamScreen(viewModel: TeamScreenViewModel) {
+fun PlayersScreen(viewModel: PlayersScreenViewModel) {
     val uiState by viewModel.uiState.collectAsState()
     val coroutineScope = rememberCoroutineScope()
     val navigator = LocalNavigator.currentOrThrow
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
 
-    TeamScreenContent(
+    PlayersScreenContent(
         uiState = uiState,
         coroutineScope = coroutineScope,
         navigator = navigator,

@@ -40,7 +40,7 @@ fun StadiumScreenContent(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Stadium Screen") },
+                    title = { Text("Stadion") },
                     colors = TopAppBarDefaults.topAppBarColors(
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
                         titleContentColor = MaterialTheme.colorScheme.primary,

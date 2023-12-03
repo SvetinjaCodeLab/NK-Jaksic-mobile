@@ -40,7 +40,7 @@ fun TableScreenContent(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Table Screen") },
+                    title = { Text("Tablica") },
                     colors = TopAppBarDefaults.topAppBarColors(
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
                         titleContentColor = MaterialTheme.colorScheme.primary,

@@ -40,7 +40,7 @@ fun FansScreenContent(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Fans Screen") },
+                    title = { Text("Navijači") },
                     colors = TopAppBarDefaults.topAppBarColors(
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
                         titleContentColor = MaterialTheme.colorScheme.primary,

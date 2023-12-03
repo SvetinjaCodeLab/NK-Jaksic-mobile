@@ -40,7 +40,7 @@ fun ScheduleScreenContent(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Schedule Screen") },
+                    title = { Text("Raspored") },
                     colors = TopAppBarDefaults.topAppBarColors(
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
                         titleContentColor = MaterialTheme.colorScheme.primary,

@@ -1,4 +1,4 @@
-package presentation.screens.team
+package presentation.screens.team.players
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -27,8 +27,8 @@ import presentation.screens.team.composables.PlayersList
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TeamScreenContent(
-    uiState: TeamState,
+fun PlayersScreenContent(
+    uiState: PlayersState,
     coroutineScope: CoroutineScope,
     navigator: Navigator,
     drawerState: DrawerState
@@ -46,7 +46,7 @@ fun TeamScreenContent(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Team Screen") },
+                    title = { Text("Ekipa") },
                     colors = TopAppBarDefaults.topAppBarColors(
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
                         titleContentColor = MaterialTheme.colorScheme.primary,
@@ -71,7 +71,10 @@ fun TeamScreenContent(
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    PlayersList(uiState.playersList)
+                    PlayersList(
+                        playersList = uiState.playersList,
+                        navigator = navigator
+                    )
                 }
             }
         )

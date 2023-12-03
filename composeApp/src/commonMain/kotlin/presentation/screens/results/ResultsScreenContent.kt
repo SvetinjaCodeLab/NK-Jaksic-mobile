@@ -40,7 +40,7 @@ fun ResultScreenContent(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Results Screen") },
+                    title = { Text("Rezultati") },
                     colors = TopAppBarDefaults.topAppBarColors(
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
                         titleContentColor = MaterialTheme.colorScheme.primary,
