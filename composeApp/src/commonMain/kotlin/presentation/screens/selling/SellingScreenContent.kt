@@ -14,6 +14,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import cafe.adriel.voyager.navigator.Navigator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -42,8 +43,8 @@ fun SellingScreenContent(
                 TopAppBar(
                     title = { Text("Prodaja") },
                     colors = TopAppBarDefaults.topAppBarColors(
-                        containerColor = MaterialTheme.colorScheme.primaryContainer,
-                        titleContentColor = MaterialTheme.colorScheme.primary,
+                        containerColor = Color(0xFF6e9ee0),
+                        titleContentColor = Color.White
                     ),
                     navigationIcon = {
                         IconButton(onClick = {
@@ -53,7 +54,8 @@ fun SellingScreenContent(
                         }) {
                             Icon(
                                 imageVector = Icons.Default.Menu,
-                                contentDescription = null
+                                contentDescription = null,
+                                tint = Color.White
                             )
                         }
                     }

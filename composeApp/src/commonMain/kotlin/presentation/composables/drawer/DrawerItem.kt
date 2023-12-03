@@ -29,7 +29,6 @@ fun DrawerItem(
         modifier = modifier
             .padding(8.dp)
             .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.background)
             .clickable { onItemClick.invoke(screen) }
     ) {
         Image(

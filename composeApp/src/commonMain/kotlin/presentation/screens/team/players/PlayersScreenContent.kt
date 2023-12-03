@@ -19,6 +19,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import cafe.adriel.voyager.navigator.Navigator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -48,8 +49,8 @@ fun PlayersScreenContent(
                 TopAppBar(
                     title = { Text("Ekipa") },
                     colors = TopAppBarDefaults.topAppBarColors(
-                        containerColor = MaterialTheme.colorScheme.primaryContainer,
-                        titleContentColor = MaterialTheme.colorScheme.primary,
+                        containerColor = Color(0xFF6e9ee0),
+                        titleContentColor = Color.White
                     ),
                     navigationIcon = {
                         IconButton(onClick = {
@@ -59,7 +60,8 @@ fun PlayersScreenContent(
                         }) {
                             Icon(
                                 imageVector = Icons.Default.Menu,
-                                contentDescription = "Team Screen menu icon"
+                                contentDescription = "Team Screen menu icon",
+                                tint = Color.White
                             )
                         }
                     }

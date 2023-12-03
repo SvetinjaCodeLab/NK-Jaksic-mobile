@@ -14,6 +14,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.toUpperCase
 import cafe.adriel.voyager.navigator.Navigator
 import data.model.Player
@@ -29,8 +30,8 @@ fun PlayerDetailsScreenContent(
             TopAppBar(
                 title = { Text("${player.firstName} ${player.lastName}") },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer,
-                    titleContentColor = MaterialTheme.colorScheme.primary,
+                    containerColor = Color(0xFF6e9ee0),
+                    titleContentColor = Color.White
                 ),
                 navigationIcon = {
                     IconButton(onClick = {
@@ -38,7 +39,8 @@ fun PlayerDetailsScreenContent(
                     }) {
                         Icon(
                             imageVector = Icons.Default.ArrowBack,
-                            contentDescription = "Player details back button"
+                            contentDescription = "Player details back button",
+                            tint = Color.White
                         )
                     }
                 }
