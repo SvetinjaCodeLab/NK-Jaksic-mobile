@@ -1,5 +1,6 @@
 package data.remote.api
 
+import data.model.Article
 import data.model.Player
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -27,4 +28,5 @@ class NKJaksicApi {
     }
 
     suspend fun getAllPlayers(): List<Player> = httpClient.get("players").body()
+    suspend fun getAllArticles(): List<Article> = httpClient.get("articles").body()
 }
