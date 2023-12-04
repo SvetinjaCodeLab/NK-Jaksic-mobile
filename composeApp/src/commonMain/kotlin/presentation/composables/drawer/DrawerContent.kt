@@ -18,7 +18,7 @@ import cafe.adriel.voyager.core.screen.Screen
 import presentation.screens.fans.Fans
 import presentation.screens.feedback.Feedback
 import presentation.screens.home.Home
-import presentation.screens.news.News
+import presentation.screens.news.articles.News
 import presentation.screens.results.Results
 import presentation.screens.schedule.Schedule
 import presentation.screens.selling.Selling
