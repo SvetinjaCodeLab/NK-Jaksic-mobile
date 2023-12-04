@@ -1,7 +1,7 @@
 package domain.usecase
 
-import domain.repository.TeamRepository
+import domain.repository.ArticleRepository
 
-class GetAllArticlesUseCase(private val teamRepository: TeamRepository) {
-    suspend operator fun invoke() = teamRepository.getAllArticles()
+class GetAllArticlesUseCase(private val articleRepository: ArticleRepository) {
+    suspend operator fun invoke() = articleRepository.getAllArticles()
 }

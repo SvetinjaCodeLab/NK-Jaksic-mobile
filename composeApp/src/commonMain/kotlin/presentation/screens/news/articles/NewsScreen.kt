@@ -1,4 +1,4 @@
-package presentation.screens.news
+package presentation.screens.news.articles
 
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.rememberDrawerState
